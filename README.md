@@ -38,18 +38,91 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+FULL ADDER
+
+![WhatsApp Image 2024-12-03 at 5 01 08 PM](https://github.com/user-attachments/assets/013d98f2-6c55-4f59-b012-3d814b014521)
+
+FULL SUBRACTOR
+
+![WhatsApp Image 2024-12-03 at 5 02 35 PM](https://github.com/user-attachments/assets/98e2e281-8030-45c7-a470-297972157dd4)
+
+
 **Procedure**
 
-Write the detailed procedure here
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+FULL ADDER 
+```
+module exp4(sum,cout,a,b,cin);
+output sum;
+output cout;
+input a;
+input b;
+input cin;
+wire s1,c1,c2;
+xor(s1,a,b);
+and(c1,a,b);
+xor(sum,s1,cin);
+and(c2,s1,cin);
+or(cout,c2,c1);
+endmodule
+```
+
+FULL SUBRACTOR
+```
+module exp4a(df,bo,a,b,bin);
+output df;
+output bo;
+input a;
+input b;
+input bin;
+wire w1,w2,w3;
+assign w1=a^b;
+assign w2=(~a&b);
+assign w3=(~w1&bin);
+assign df=w1^bin;
+assign bo=w2|w3;
+endmodule
+```
+
+
+/* Program to design a full adder and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+Developed by:THIRUNAVUKKARASU MEENAKSHISUNDARAM 
+RegisterNumber:24006365
 */
 
 **RTL Schematic**
 
+FULL ADDER 
+
+![WhatsApp Image 2024-12-03 at 4 33 25 PM](https://github.com/user-attachments/assets/e8d04f1a-3477-4bf7-967d-377a523502ec)
+
+
+FULL SUBRACTOR
+![WhatsApp Image 2024-12-03 at 4 41 13 PM](https://github.com/user-attachments/assets/195a2d88-8771-4088-bf5e-2e0aab463fa0)
+
+
 **Output Timing Waveform**
+
+FULL ADDER
+
+![WhatsApp Image 2024-12-03 at 4 33 43 PM](https://github.com/user-attachments/assets/8ddcd88b-cf7f-4e9b-a404-6babac518b6d)
+
+FULL SUBRACTOR
+
+![WhatsApp Image 2024-12-03 at 4 44 14 PM](https://github.com/user-attachments/assets/056b4368-3c85-4516-983c-9797db37bcb3)
+
+
 
 **Result:**
 

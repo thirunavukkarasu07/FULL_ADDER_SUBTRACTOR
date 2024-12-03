@@ -38,9 +38,11 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+
 FULL ADDER
 
 ![WhatsApp Image 2024-12-03 at 5 01 08 PM](https://github.com/user-attachments/assets/013d98f2-6c55-4f59-b012-3d814b014521)
+
 
 FULL SUBRACTOR
 
@@ -58,6 +60,7 @@ FULL SUBRACTOR
 4.Create nodes for inputs and outputs to generate the timing diagram.
 
 5.For different input combinations generate the timing diagram.
+
 
 **Program:**
 
